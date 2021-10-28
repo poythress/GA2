@@ -20,6 +20,8 @@ while command != 'q':
     if command == 'p':
         string1 = string1.translate(str.maketrans('','', string.punctuation))
         print(string1)
+    elif command == 'c':
+        print(len(string1.split()))
     command = input(">")
 
 
