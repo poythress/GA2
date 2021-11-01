@@ -18,10 +18,23 @@ command = input(">")
 
 while command != 'q':
     if command == 'p':
-        string1 = string1.translate(str.maketrans('','', string.punctuation))
+        string1 = string1.translate(str.maketrans('', '', string.punctuation))
         print(string1)
     elif command == 'c':
         print(len(string1.split()))
+    elif command == 'w':
+        word = input("Enter a word: ")
+        if word.lower() in string1.lower():
+            print("Yes, that word is in the string.")
+        else:
+            print(f'No, {word} is not in your string.')
+    elif command == 'r':
+        word = input("Enter the word you'd like to replace: ")
+        replacement = input("Enter replacement word: ")
+        if word in string1:
+            string1 = string1.replace(word, replacement)
+            print(string1)
+        else:
+            print("That was not found in the string.")
+
     command = input(">")
-
-
